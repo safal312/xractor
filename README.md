@@ -1,4 +1,5 @@
-packaging_tutorial/
+```
+xractor_package/
 ├── LICENSE
 ├── pyproject.toml
 ├── README.md
@@ -10,7 +11,9 @@ packaging_tutorial/
 │       └── scraper/
 │           ├── __init__.py
 │           └── scraper.py
+├── main.py
 └── sample_infile.csv
+```
 
 Requirements:
 
