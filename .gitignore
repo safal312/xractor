@@ -1,0 +1,6 @@
+.env
+__pycache__/
+env/
+*.egg-info/
+downloaded_xrays/
+*.pkl
