@@ -350,6 +350,9 @@ class Xractor(Scraper):
             if meta['xray_present'] == "no_tag" or meta['playable'] == "no":
                 with self.lock:
                     pd.DataFrame(meta, index=[0]).to_csv(meta_file, mode='a', index=False, header=not os.path.exists(meta_file))
+                
+                # reset the requests for next movie
+                del driver.requests
                 continue
             
             # you can sometimes be interrupted by captcha checks in the middle at times

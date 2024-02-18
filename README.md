@@ -129,6 +129,9 @@ The `log.csv` file includes essential information on the download process. The f
 - **all_resource (bool):**
   - If True, both xray and playbackresources files were successfully downloaded.
 
+### Scraping Data for Input File
+TBD
+
 ### Recommendations
 Xractor uses multiple heuristics to scrape the data while navigating through the complex nature of the Amazon Prime Video platform and network issues. Therefore, it is recommended to run the browser in visual mode (headless=False) to inspect the situation at certain times.
 
