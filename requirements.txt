@@ -38,5 +38,5 @@ urllib3==2.1.0
 webdriver-manager==4.0.1
 wsproto==1.2.0
 # Editable install with no version control (xractor==0.0.1)
--e d:\safal\summer 2023\xray\xray_tool
+-e .
 zstandard==0.22.0

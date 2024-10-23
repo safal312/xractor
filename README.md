@@ -4,7 +4,7 @@ Xractor is a module that allows scraping of [X-Ray data](https://www.amazon.com/
 
 ## Installation Guide
 
-The module is currently available on testPyPI. Please install with the following instruction:(TBD)
+Please install with the following instruction:(TBD)
 
 If running locally, please install the module locally with the following instructions:
 ```
