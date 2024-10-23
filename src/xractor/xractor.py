@@ -88,7 +88,16 @@ class Xractor(Scraper):
         Sets the driver scopes to look for the "Playback Resources" and "Xray" files. 
        
         """
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=self.options, seleniumwire_options=self.wire_options)
+        # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=self.options, seleniumwire_options=self.wire_options)
+        
+        chrome_install = ChromeDriverManager().install()
+
+        folder = os.path.dirname(chrome_install)
+        chromedriver_path = os.path.join(folder, "chromedriver.exe")
+
+        service = Service(chromedriver_path)
+        driver = webdriver.Chrome(service=service, options=self.options, seleniumwire_options=self.wire_options)
+        
         driver.scopes = [
             "https://atv-ps.amazon.com/cdp/catalog/GetPlaybackResources",
             "https://atv-ps.amazon.com/swift/page/xrayVOD"

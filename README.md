@@ -1,10 +1,10 @@
 # Xractor
 
-Xractor is a module that allows scraping of [X-Ray data](https://www.amazon.com/salp/xray) from the Amazon Prime Video Platform. X-Ray data has been deemed quite useful in academia for network analysis of character interactions however the current method to gather it is [manual](https://weltliteratur.net/extracting-network-data-from-amazon-prime-videos/). This tool allows a user to pass in a set of links for automatic scraping for large scale analysis.
+Xractor is a module that allows scraping of [X-Ray data](https://www.amazon.com/salp/xray) from the Amazon Prime Video Platform. This tool allows a user to pass in a set of links for automatic scraping for large scale analysis.
 
 ## Installation Guide
 
-Please install with the following instruction:(TBD)
+Please install with the following instruction:
 
 If running locally, please install the module locally with the following instructions:
 ```
