@@ -3,10 +3,10 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-class Scraper:
+class Collector:
     def __init__(self, headless=True, fast_load=False):
         """
-        Initializes a Selenium web scraper with customizable options.
+        Initializes a Selenium web instance with customizable options.
 
         Args:
             headless (bool): If True, runs the browser in headless mode.

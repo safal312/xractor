@@ -20,22 +20,22 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.action_chains import ActionChains
 from seleniumwire import webdriver
 
-from .scraper import Scraper
+from .collector import Collector
 
-class Xractor(Scraper):
+class Xractor(Collector):
     def __init__(self, workers=1, headless=False, manual_signin=False,
                  base_url="https://www.amazon.com", sign_in_url="https://www.amazon.com/gp/sign-in.html",
                  cookies_file="cookies.pkl", fname_in_file="file", link_in_file="link",
                  meta_file="log.csv",
                  overwrite_old_movie_dirs=True, retries=3):
         """
-        Initializes a Xray web scraper with customizable options and number of workers.
+        Initializes a Xray collector with customizable options and number of workers.
 
         Args:
             workers (int): Number of workers to initialize for parallelization.
             headless (bool): If True, runs the browser in headless mode.
             manual_signin (bool): If True, the user will be asked to manually add credentials, else a env file must be provided with Amazon username and password.
-            base_url (str): Base URL of the website to scrape.
+            base_url (str): Base URL of the website to collect.
             sign_in_url (str): URL of the sign-in webpage.
             cookies_file (str): File to save cookies in.
             fname_in_file (str): Column name of unique filenames in the input file.
@@ -320,7 +320,7 @@ class Xractor(Scraper):
 
         for index, row in df.iterrows():
             # print current file
-            print(f"\nScraping data for: {index}, {row[self.fname_in_file]}\n")
+            print(f"\nCollecting data for: {index}, {row[self.fname_in_file]}\n")
 
             meta = {}
             meta['fname'] = row[self.fname_in_file]
@@ -403,12 +403,12 @@ class Xractor(Scraper):
             # reset the requests in each iteration
             del driver.requests
             
-        print("Scraping done for this chunk")
+        print("Collection done for this chunk")
 
     # https://medium.com/geekculture/introduction-to-selenium-and-python-multi-threading-module-aa5b1c4386cb
     def run_workers(self, main_df, SAVE_DIR):
         """
-        Runs the workers to scrape the data.
+        Runs the workers to collect the data.
 
         Args:
             main_df (pandas.DataFrame): Dataframe containing the movie data
